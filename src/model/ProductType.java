@@ -16,13 +16,13 @@ public class ProductType {
 		products = new ArrayList<>();
 		restaurants = new ArrayList<>();
 	}
-	
+
 	public void registerProduct(String name, String description, double cost) {
 		Product p = new Product( name, description, cost);
 		products.add(p);		
 	}
-	
-	public void registerCustomer(String typeId, String id, String fullNam, String phone, String address) {
+
+	public void registerClients(String typeId, String id, String fullNam, String phone, String address) {
 		ClientAccount ca = new ClientAccount(typeId, id, fullNam, phone, address);
 		if(clients.isEmpty()) {
 			clients.add(ca);
@@ -34,7 +34,20 @@ public class ProductType {
 			clients.add(i, ca);
 		}
 	}
-	
 
+	public void sortCustomersBySurnamesAndNames() {
 
+		for (int i = 1; i < clients.size(); i++) { 
+
+			ClientAccount temp = clients.get(i);
+			int j = i - 1;
+			while (j >= 0 && clients.get(j).compareToBySurnamesAndName(temp)>0) {
+
+				clients.set(j+1, temp);
+				j = j - 1; 
+			} 
+			clients.set(j+1, temp);
+		}
+
+	}
 }
