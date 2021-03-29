@@ -50,4 +50,19 @@ public class ProductType {
 		}
 
 	}
+	
+
+	public List<ClientAccount> getCustomers(){
+		return clients;
+	}
+	public List<Order> getOrders(){
+		return orders;
+	}
+	public List<Product> getProducts(){
+		return products;
+	}
+	public List<LaCasaDorada> getRestaurants(){
+		return restaurants;
+	}
+
 }
