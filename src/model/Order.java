@@ -21,7 +21,6 @@ public class Order {
 	
 	}
 	
-	
 	public void setStatus(OrderStatus oStatus) {
 		status = oStatus;
 	}
