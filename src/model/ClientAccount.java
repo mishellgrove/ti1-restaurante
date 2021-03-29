@@ -1,5 +1,6 @@
 package model;
 
+// @autor:Mishell Arboleda
 public class ClientAccount implements Comparable<ClientAccount> {
 
 	private String names;
@@ -27,6 +28,7 @@ public class ClientAccount implements Comparable<ClientAccount> {
 		}		
 		return  comparator;
 	}
+	
 
 	public String getId() {
 		return id;
