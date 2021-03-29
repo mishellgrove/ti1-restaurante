@@ -22,6 +22,19 @@ public class ProductType {
 		products.add(p);		
 	}
 	
+	public void registerCustomer(String typeId, String id, String fullNam, String phone, String address) {
+		ClientAccount ca = new ClientAccount(typeId, id, fullNam, phone, address);
+		if(clients.isEmpty()) {
+			clients.add(ca);
+		}else {			
+			int i = 0;
+			while (i<clients.size() && ca.compareTo(clients.get(i))<0) {
+				i++;
+			}
+			clients.add(i, ca);
+		}
+	}
+	
 
 
 }

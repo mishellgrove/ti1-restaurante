@@ -42,7 +42,6 @@ public class ClientAccount implements Comparable<ClientAccount> {
 		return  compator;
 	}
 	
-
 	public String getId() {
 		return id;
 	}
