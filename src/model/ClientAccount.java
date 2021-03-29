@@ -29,6 +29,19 @@ public class ClientAccount implements Comparable<ClientAccount> {
 		return  comparator;
 	}
 	
+	public int compareToId(ClientAccount c) {			
+		return  id.compareTo(c.getId());		
+	}
+	
+	public int compareToBySurnamesAndName(ClientAccount c) {
+		int compator;		
+		compator = surnames.compareTo(c.getSurnames());
+		if (compator == 0) {
+			compator =names.compareTo(c.getName()); 
+		}		
+		return  compator;
+	}
+	
 
 	public String getId() {
 		return id;
